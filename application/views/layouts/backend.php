@@ -55,7 +55,7 @@
         <!-- Bootstrap 3.3.7 -->
         <script src="<?=base_url('assets/vendors/bootstrap/dist/js/bootstrap.min.js')?>"></script>
     </head>
-    <body class="skin-red-light sidebar-mini">
+    <body class="skin-red sidebar-mini">
         <!-- loader -->
         <div id="preloader">
             <div id="status">
@@ -103,6 +103,10 @@
         <script src="<?=base_url('assets/vendors/jquery-slimscroll/jquery.slimscroll.min.js')?>"></script>
         <!-- FastClick -->
         <script src="<?=base_url('assets/vendors/fastclick/lib/fastclick.js')?>"></script>
+         <!-- validator -->
+        <script src="<?=base_url('assets/vendors/jquery-validation/jquery.validate.min.js')?>"></script>
+        <!-- sweet alert -->
+        <script src="<?=base_url('assets/vendors/sweetalert/sweetalert.min.js')?>"></script>
         <!-- AdminLTE App -->
         <script src="<?=base_url('assets/js/adminlte.js')?>"></script>
         <script type="text/javascript">

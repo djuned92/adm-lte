@@ -17,7 +17,7 @@ class Home extends MX_Controller {
 		// dd($data); 
 		$data['pintu_air'] = []; 
 		$this->template->set_layout('backend')
-						->title('Home - Gentella')
+						->title('Home - AdminLTE')
 						->build('v_home', $data);
 	}
 }

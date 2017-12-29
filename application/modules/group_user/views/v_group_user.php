@@ -3,39 +3,34 @@
 ?>
 <!-- datatables -->
 <link href="<?=base_url('assets/vendors/datatables/css/dataTables.bootstrap.css')?>" rel="stylesheet">
-<div class="page-title">
-    <div class="title_left">
-        <h3>Group User</h3>
-    </div>
-    <div class="title_right">
-        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search for...">
-                <span class="input-group-btn">
-                <button class="btn btn-default" type="button">Go!</button>
-                </span>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="clearfix"></div>
-<div class="row">
-    <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="x_panel">
-            <div class="x_title">
-                <h2>Group User</h2>
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>Group User</h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">User</a></li>
+            <li class="active">Group User</li>
+        </ol>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+        <!-- Default box -->
+        <div class="box">
+            <div class="box-header with-border">
+                <h3 class="box-title">Group User</h3>
                 <?php if($privileges[0] == 1): ?>
-                    <div class="navbar-right">
+                    <div class="box-tools pull-right">
                         <a href="<?=base_url('group_user/add')?>">
                             <button type="button" class="btn btn-sm btn-primary">
                                 <i class="fa fa-plus"></i> Add
                             </button>
                         </a>
                     </div>
-                <?php endif ?>
-                <div class="clearfix"></div>
+                <?php endif ?>   
             </div>
-            <div class="x_content">
+            <div class="box-body">
                 <table class="table table-bordered table-striped" id="myTable">
                     <thead>
                         <tr>
@@ -86,8 +81,12 @@
                     </tbody>
                 </table>
             </div>
+            <!-- /.box-body -->
+
         </div>
-    </div>
+        <!-- /.box -->
+    </section>
+    <!-- /.content -->
 </div>
 <!-- datatables -->
 <script src="<?=base_url('assets/vendors/datatables/js/jquery.dataTables.js')?>"></script>

@@ -8,7 +8,7 @@
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-        <h1>Users</h1>
+        <h1>List User</h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
             <li><a href="#">Settings</a></li>
@@ -21,7 +21,7 @@
         <!-- Default box -->
         <div class="box">
             <div class="box-header with-border">
-                <h3 class="box-title">Users</h3>
+                <h3 class="box-title">List User</h3>
                 <?php if($privileges[0] == 1): ?>
                     <div class="box-tools pull-right">
                         <a href="<?=base_url('users/add')?>">

@@ -1,45 +1,23 @@
-<div class="page-title">
-    <div class="title_left">
-        <h3><?=($this->uri->segment(2) == 'add') ? 'Add ' : 'Edit '?>Group User</h3>
-    </div>
-    <div class="title_right">
-        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search for...">
-                <span class="input-group-btn">
-                <button class="btn btn-default" type="button">Go!</button>
-                </span>
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1><?=($this->uri->segment(2) == 'add') ? 'Add ' : 'Edit '?>Users</h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Group User</a></li>
+            <li class="active"><?=($this->uri->segment(2) == 'add') ? 'Add ' : 'Edit '?> Group User</li>
+        </ol>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+        <!-- Default box -->
+        <div class="box">
+            <div class="box-header with-border">
+                <h3 class="box-title"><?=($this->uri->segment(2) == 'add') ? 'Add ' : 'Edit '?>Group Users</h3>
             </div>
-        </div>
-    </div>
-</div>
-<div class="clearfix"></div>
-<div class="row">
-    <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="x_panel">
-            <div class="x_title">
-                <h2><?=($this->uri->segment(2) == 'add') ? 'Add ' : 'Edit '?>Group User</h2>
-                <ul class="nav navbar-right panel_toolbox">
-                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            <i class="fa fa-wrench"></i>
-                        </a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Settings 1</a>
-                            </li>
-                            <li><a href="#">Settings 2</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a class="close-link"><i class="fa fa-close"></i></a>
-                    </li>
-                </ul>
-                <div class="clearfix"></div>
-            </div>
-            <div class="x_content">
-                <form class="form-horizontal form-label-left" id="myForm">
+            <div class="box-body">
+                <form class="form-horizontal" id="myForm">
                     
                     <?php if($this->uri->segment(2) == 'update'): ?>
                     <input type="hidden" name="id" value="<?=$this->uri->segment(3)?>">
@@ -63,10 +41,14 @@
                         </div>
                     </div>
 
-                </form>      
+                </form>
             </div>
+            <!-- /.box-body -->
+
         </div>
-    </div>
+        <!-- /.box -->
+    </section>
+    <!-- /.content -->
 </div>
 
 <?php $this->load->view('helper/ajax_form_add_update.php') ?>

@@ -1,47 +1,25 @@
 <!-- select2 -->
 <link href="<?=base_url('assets/vendors/select2/dist/css/select2.min.css')?>" rel="stylesheet">
-<div class="page-title">
-    <div class="title_left">
-        <h3><?=($this->uri->segment(2) == 'add') ? 'Add ' : 'Edit '?>Menu</h3>
-    </div>
-    <div class="title_right">
-        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search for...">
-                <span class="input-group-btn">
-                <button class="btn btn-default" type="button">Go!</button>
-                </span>
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1><?=($this->uri->segment(2) == 'add') ? 'Add ' : 'Edit '?>Menu</h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Menu</a></li>
+            <li class="active"><?=($this->uri->segment(2) == 'add') ? 'Add ' : 'Edit '?> Menu</li>
+        </ol>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+        <!-- Default box -->
+        <div class="box">
+            <div class="box-header with-border">
+                <h3 class="box-title"><?=($this->uri->segment(2) == 'add') ? 'Add ' : 'Edit '?>Menu</h3>
             </div>
-        </div>
-    </div>
-</div>
-<div class="clearfix"></div>
-<div class="row">
-    <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="x_panel">
-            <div class="x_title">
-                <h2><?=($this->uri->segment(2) == 'add') ? 'Add ' : 'Edit '?>Menu</h2>
-                <ul class="nav navbar-right panel_toolbox">
-                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            <i class="fa fa-wrench"></i>
-                        </a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Settings 1</a>
-                            </li>
-                            <li><a href="#">Settings 2</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a class="close-link"><i class="fa fa-close"></i></a>
-                    </li>
-                </ul>
-                <div class="clearfix"></div>
-            </div>
-            <div class="x_content">
-                <form class="form-horizontal form-label-left" id="myForm">
+            <div class="box-body">
+                <form class="form-horizontal" id="myForm">
                     
                     <?php if($this->uri->segment(2) == 'update'): ?>
                     <input type="hidden" name="id" value="<?=$this->uri->segment(3)?>">
@@ -66,10 +44,9 @@
                     <div class="form-group">
                         <label class="control-label col-md-2 col-sm-2 col-xs-12">Parent <span class="required">*</span></label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                            <select style="width: 100%;" class="form-control populate placeholder" name="parent" id="parent" required></select>
+                            <select class="form-control populate placeholder" name="parent" id="parent" style="width: 100%;" required></select>
                         </div>
                     </div>
-
 
                     <div class="form-group">
                         <label class="control-label col-md-2 col-sm-2 col-xs-12">Menu Order <span class="required">*</span></label>
@@ -87,9 +64,6 @@
                         </div>
                     </div>
 
-                    
-
-                    <div class="ln_solid"></div>
                     <div class="form-group">
                         <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-2">
                             <a href="<?=base_url('list_menus')?>">
@@ -99,15 +73,16 @@
                         </div>
                     </div>
 
-                </form>      
+                </form>     
             </div>
-        </div>
-        <div class="x_panel">
-            <div class="x_content">
+            <!-- /.box-body -->
+            <div class="box-footer">
                 <?php $this->load->view('font-awesome') ?>
             </div>
         </div>
-    </div>
+        <!-- /.box -->
+    </section>
+    <!-- /.content -->
 </div>
 
 <!-- select2 -->
