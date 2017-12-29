@@ -55,7 +55,8 @@
         <!-- Bootstrap 3.3.7 -->
         <script src="<?=base_url('assets/vendors/bootstrap/dist/js/bootstrap.min.js')?>"></script>
     </head>
-    <body class="skin-red sidebar-mini">
+    <?php $app = $this->global->get('apps')->row_array(); ?>
+    <body class="<?=$app['app_theme']?> sidebar-mini">
         <!-- loader -->
         <div id="preloader">
             <div id="status">
@@ -73,9 +74,9 @@
                 <!-- Logo -->
                 <a href="../../index2.html" class="logo">
                     <!-- mini logo for sidebar mini 50x50 pixels -->
-                    <span class="logo-mini"><b>A</b>LT</span>
+                    <span class="logo-mini"><b><?=$app['app_logo_mini']?></b></span>
                     <!-- logo for regular state and mobile devices -->
-                    <span class="logo-lg"><b>Admin</b>LTE</span>
+                    <span class="logo-lg"><b><?=$app['app_logo_lg']?></b></span>
                 </a>
                 <!-- Header Navbar: style can be found in header.less -->
                 <?php $this->load->view('layouts/partials/backend/header.php') ?>
