@@ -51,4 +51,4 @@
     <!-- /.content -->
 </div>
 
-<?php $this->load->view('helper/ajax_form_add_update.php') ?>
+<?php $this->load->view('helper/ajax_form_add_update') ?>
