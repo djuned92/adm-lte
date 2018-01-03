@@ -11,7 +11,7 @@
         <link href="<?=base_url('assets/css/login.css')?>" rel="stylesheet">
     </head>
     <body class="login">
-        <div class="container">
+        <div class="container" style="margin-top: 150px;">
             <section id="content">
                 <form action="#" id="login_form">
                     <h1>Login Form</h1>
@@ -22,7 +22,7 @@
                         <input type="password" name="password" placeholder="Password" required="" id="password" />
                     </div>
                     <div>
-                        <input type="submit" value="Log in" />
+                        <input type="submit" value="Log in" id="submit" />
                         <a href="#">Lost your password?</a>
                         <a href="#">Register</a>
                     </div>
@@ -37,33 +37,22 @@
         <script src="<?=base_url('assets/vendors/jquery-validation/jquery.validate.min.js')?>"></script>
         <script>
             $(document).ready(function() {
-                $('#login_form').validate({
-                    rules: {
-                        username: {
-                            required: true
-                        },
-                        password: {
-                            required: true
-                        }
-                    },
-                    submitHandler: function(form) {
-                        $.ajax({
-                            url: "<?=base_url('auth/do_login')?>",
-                            type: 'post',
-                            dataType: 'json',
-                            data: $('#login_form').serializeArray(),
-                            beforeSend: function() {},
-                            success: function(data) {
-                                $("#password").val('');
-                                if (data.error == true) {
-                                    alert(data.message);
-                                } else {
-                                    window.location.href = "<?=base_url('home')?>";
-                                }
+                $('#submit').on('click', function() {
+                    $.ajax({
+                        url: "<?=base_url('auth/do_login')?>",
+                        type: 'post',
+                        dataType: 'json',
+                        data: $('#login_form').serializeArray(),
+                        beforeSend: function() {},
+                        success: function(data) {
+                            $("#password").val('');
+                            if (data.error == true) {
+                                alert(data.message);
+                            } else {
+                                window.location.href = "<?=base_url('home')?>";
                             }
-
-                        });
-                    }
+                        }
+                    });
                 });
             }); 
         </script>
